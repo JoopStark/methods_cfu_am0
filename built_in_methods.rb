@@ -92,3 +92,20 @@ puts bakers_gross.round(-1)
 # Call a different built-in Ruby method on each of your variables. 
 # https://ruby-doc.org/core-3.1.0/Array.html
 # Include comments above each method call explaining the impact and return value of that method.
+
+# The method 'any?' looks though an array for the argument and if the argument matches it gives back the boolean true. If it cannot find it, it gives false.
+# It does not pullow out that value from the array. In my example I asked if the piece of a sting chin was in this array of strings. It was so it returned true.
+# I also checked if tiger was in there and it was not so it returned false.
+animals = ["dog", "cat", "chinchilla", "horse", "seal", "walrus"]
+p animals.any?(/chin/)
+p animals.any?(/tiger/)
+
+# The 'index' method will tell you the index of object provide as an argument in an array. It will only index the first object and will not tell you if there are others.
+# It will print 'nil' if it cannot find that object.
+# My first print will print index '5' as 31 is the sixth item on a zero indexed array. It does not print the index '7' for the second 31.
+# The second will print '1'.
+# The third will print 'nil'.
+nums = [12, 13, 18, 52, 6, 31, 89, 31]
+p nums.index(31)
+p animals.index("cat")
+p nums.index(1)
